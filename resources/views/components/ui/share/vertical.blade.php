@@ -60,17 +60,17 @@ Usage: <x-ui.share.vertical />
     </a>
 
     <!-- Social icons (no background) -->
-    <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+    <a href="https://github.com/sanzgrapher" target="_blank" rel="noopener noreferrer"
         class="text-2xl text-gray-500 hover:text-red-600 transition-colors animate-icon-on-hover" aria-label="GitHub">
         <i class="fab fa-github"></i>
     </a>
 
-    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+    <a href="https://www.linkedin.com/in/narayandhakal09/" target="_blank" rel="noopener noreferrer"
         class="text-2xl text-gray-500 hover:text-red-600 transition-colors animate-icon-on-hover" aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
     </a>
 
-    <a href="mailto:hello@example.com" aria-label="Email" title="Email"
+    <a href="mailto:narayandhakal443@gmail.com" aria-label="Email" title="Email"
         class="text-2xl text-gray-500 hover:text-red-600 transition-colors animate-icon-on-hover">
         <i class="fas fa-envelope"></i>
     </a>

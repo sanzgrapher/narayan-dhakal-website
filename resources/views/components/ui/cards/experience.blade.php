@@ -31,7 +31,7 @@ Usage:
     <div class="flex justify-between items-start mb-2">
         <div>
             <h3 class="text-xl font-bold">{{ $title }}</h3>
-            <p class="{{ str_replace('border-', 'text-', $borderColor) }} font-medium">{{ $company }}</p>
+            <p class="{{ str_replace('border-', 'text-', $borderColor) }} font-medium">{!! $company !!}</p>
         </div>
         <span class="text-sm text-gray-600">{{ $duration }}</span>
     </div>

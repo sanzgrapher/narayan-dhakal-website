@@ -14,6 +14,30 @@
                         icon='<i class="fab fa-laravel text-5xl text-red-500 mb-2"></i>' label="Laravel" />
                 </div>
                 <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="PHP"
+                        icon='<i class="fab fa-php text-5xl text-indigo-500 mb-2"></i>' label="PHP" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="MySQL"
+                        icon='<i class="fas fa-database text-5xl text-blue-500 mb-2"></i>' label="MySQL" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="Tailwind"
+                        icon='<i class="fas fa-wind text-5xl text-cyan-500 mb-2"></i>' label="Tailwind" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="Flutter"
+                        icon='<i class="fas fa-mobile-alt text-5xl text-teal-500 mb-2"></i>' label="Flutter" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="Git"
+                        icon='<i class="fab fa-git-alt text-5xl text-orange-500 mb-2"></i>' label="Git" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="Docker"
+                        icon='<i class="fab fa-docker text-5xl text-blue-400 mb-2"></i>' label="Docker" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
                     <x-ui.cards.labeledicon aria-label="Vue.js"
                         icon='<i class="fab fa-vuejs text-5xl text-green-500 mb-2"></i>' label="Vue.js" />
                 </div>
@@ -61,6 +85,30 @@
                 <div class="marquee-item tech-icon text-center">
                     <x-ui.cards.labeledicon aria-label="Laravel"
                         icon='<i class="fab fa-laravel text-5xl text-red-500 mb-2"></i>' label="Laravel" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="PHP"
+                        icon='<i class="fab fa-php text-5xl text-indigo-500 mb-2"></i>' label="PHP" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="MySQL"
+                        icon='<i class="fas fa-database text-5xl text-blue-500 mb-2"></i>' label="MySQL" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="Tailwind"
+                        icon='<i class="fas fa-wind text-5xl text-cyan-500 mb-2"></i>' label="Tailwind" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="Flutter"
+                        icon='<i class="fas fa-mobile-alt text-5xl text-teal-500 mb-2"></i>' label="Flutter" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="Git"
+                        icon='<i class="fab fa-git-alt text-5xl text-orange-500 mb-2"></i>' label="Git" />
+                </div>
+                <div class="marquee-item tech-icon text-center">
+                    <x-ui.cards.labeledicon aria-label="Docker"
+                        icon='<i class="fab fa-docker text-5xl text-blue-400 mb-2"></i>' label="Docker" />
                 </div>
                 <div class="marquee-item tech-icon text-center">
                     <x-ui.cards.labeledicon aria-label="Vue.js"
