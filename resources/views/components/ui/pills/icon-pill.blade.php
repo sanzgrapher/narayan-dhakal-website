@@ -10,7 +10,7 @@
     // animate the entrance of icon/text
     'animated' => false,
     // optional extra classes for the pill container
-    'class' => ''
+    'class' => '',
 ])
 
 @php
@@ -25,55 +25,36 @@
         'light' => 'bg-white text-gray-800 border border-gray-200',
     ];
 
-    $sizeMap = [
-        'small' => ['px-2', 'py-0.5', 'text-xs', 'gap-1'],
-        'normal' => ['px-3', 'py-1', 'text-sm', 'gap-2'],
-        'large' => ['px-4', 'py-1.5', 'text-base', 'gap-2.5'],
-    ];
-
+    // keep color classes (but allow override via $class prop)
     $colorClasses = $colors[$color] ?? $colors['primary'];
-    [$px, $py, $textSize, $gap] = $sizeMap[$size] ?? $sizeMap['normal'];
 
-    $animatedClasses = $animated ? 'transform transition-all duration-200 ease-out hover:scale-105' : '';
+    // rely on project's `.icon-pill` CSS for gap, padding and animation.
+// Component will add the `icon-pill` class so existing animations apply.
+$animatedClasses = $animated ? 'transform transition-all duration-200 ease-out hover:scale-105' : '';
 
-    // wrapper classes
-    $wrapper = trim(implode(' ', [
-        'inline-flex items-center rounded-full font-medium',
-        $px, $py, $textSize, $gap, $colorClasses, $animatedClasses, $class
-    ]));
-
-    // icon container classes
-    $iconSize = match($size) {
-        'small' => 'h-3 w-3',
-        'large' => 'h-5 w-5',
-        default => 'h-4 w-4',
-    };
-
-    $iconOrder = $position === 'trailing' ? 'order-2' : 'order-1';
-    $textOrder = $position === 'trailing' ? 'order-1' : 'order-2';
-    $iconMargin = $position === 'trailing' ? 'ml-2' : 'mr-2';
-    // when icon is provided via prop string, we will render it with {!! $icon !!}
+// wrapper classes: use project's icon-pill base, plus any color or extra classes
+    $wrapper = trim(
+        implode(' ', [
+            'icon-pill inline-flex items-center rounded-full font-medium',
+            $colorClasses,
+            $animatedClasses,
+            $class,
+        ]),
+    );
 @endphp
 
 <span {{ $attributes->merge(['class' => $wrapper]) }} role="status">
-    {{-- Leading icon slot/prop --}}
-    @if($position === 'leading')
-        @if(! empty($icon))
-            <span class="flex items-center {{ $iconOrder }} {{ $iconMargin }}">
-                <span class="{{ $iconSize }} inline-flex items-center justify-center">{!! $icon !!}</span>
-            </span>
+    {{-- Leading icon/prop directly as child so existing CSS (.icon-pill > i) targets it --}}
+    @if ($position === 'leading')
+        @if (!empty($icon))
+            {!! $icon !!}
         @endif
-    @endif
-
-    {{-- Text/content slot --}}
-    <span class="{{ $textOrder }}">{{ $slot }}</span>
-
-    {{-- Trailing icon slot/prop --}}
-    @if($position === 'trailing')
-        @if(! empty($icon))
-            <span class="flex items-center {{ $iconOrder }} {{ $iconMargin }}">
-                <span class="{{ $iconSize }} inline-flex items-center justify-center">{!! $icon !!}</span>
-            </span>
+        <span class="ml-0">{{ $slot }}</span>
+    @else
+        {{-- Trailing --}}
+        <span class="mr-0">{{ $slot }}</span>
+        @if (!empty($icon))
+            {!! $icon !!}
         @endif
     @endif
 </span>

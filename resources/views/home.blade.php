@@ -14,12 +14,11 @@
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-           @else
+    @else
         <!-- Fallback for when Vite assets are not built -->
         {{-- include fallback.blade.php --}}
         @include('fallback');
-
-        @endif
+    @endif
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- custom styles moved to resources/css/app.css -->
 </head>
@@ -42,22 +41,29 @@
                         and modern PHP
                     </p>
                     <div class="flex flex-wrap gap-3 justify-center md:justify-start">
-                        <span tabindex="0"
-                            class="icon-pill inline-flex items-center px-3 py-1 bg-red-200 text-red-800 rounded-full text-sm">
-                            <i class="fab fa-laravel mr-2"></i>Laravel
-                        </span>
-                        <span tabindex="0"
-                            class="icon-pill inline-flex items-center px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm">
-                            <i class="fab fa-vuejs mr-2"></i>Vue.js
-                        </span>
-                        <span tabindex="0"
-                            class="icon-pill inline-flex items-center px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm">
-                            <i class="fab fa-php mr-2"></i>PHP
-                        </span>
-                        <span tabindex="0"
-                            class="icon-pill inline-flex items-center px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm">
-                            <i class="fas fa-database mr-2"></i>MySQL
-                        </span>
+                        <x-ui.pills.icon-pill tabindex="0"
+                            class="inline-flex items-center px-3 py-1 bg-red-200 text-red-800 rounded-full text-sm"
+                            icon='<i class="fab fa-laravel"></i>'>
+                            Laravel
+                        </x-ui.pills.icon-pill>
+
+                        <x-ui.pills.icon-pill tabindex="0"
+                            class="inline-flex items-center px-3 py-1 bg-green-200 text-green-800 rounded-full text-sm"
+                            icon='<i class="fab fa-vuejs"></i>'>
+                            Vue.js
+                        </x-ui.pills.icon-pill>
+
+                        <x-ui.pills.icon-pill tabindex="0"
+                            class="inline-flex items-center px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm"
+                            icon='<i class="fab fa-php"></i>'>
+                            PHP
+                        </x-ui.pills.icon-pill>
+
+                        <x-ui.pills.icon-pill tabindex="0"
+                            class="inline-flex items-center px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm"
+                            icon='<i class="fas fa-database"></i>'>
+                            MySQL
+                        </x-ui.pills.icon-pill>
                     </div>
                 </div>
             </div>
