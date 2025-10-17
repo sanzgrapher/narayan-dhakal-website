@@ -28,41 +28,53 @@
                     <i class="fab fa-github mr-2"></i>GitHub
                 </a>
             </div>
-
             <div class="flex flex-wrap gap-3 justify-center md:justify-start">
                 <x-ui.pills.icon-pill tabindex="0"
-                    class="inline-flex items-center px-3 py-1 bg-red-200 text-red-800 rounded-full text-sm"
-                    icon='<i class="fab fa-laravel"></i>'>
+                    class="inline-flex items-center px-3 py-1 bg-red-200 text-red-800 rounded-full text-sm">
+                    <x-slot name="icon">
+                        <i class="fab fa-laravel"></i>
+                    </x-slot>
                     Laravel
                 </x-ui.pills.icon-pill>
 
                 <x-ui.pills.icon-pill tabindex="0"
-                    class="inline-flex items-center px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm"
-                    icon='<i class="fab fa-php"></i>'>
+                    class="inline-flex items-center px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm">
+                    <x-slot name="icon">
+                        <i class="fab fa-php"></i>
+                    </x-slot>
                     PHP
                 </x-ui.pills.icon-pill>
 
                 <x-ui.pills.icon-pill tabindex="0"
-                    class="inline-flex items-center px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm"
-                    icon='<i class="fas fa-database"></i>'>
+                    class="inline-flex items-center px-3 py-1 bg-purple-200 text-purple-800 rounded-full text-sm">
+                    <x-slot name="icon">
+                        <x-si-mysql class="w-3 h-3" />
+                    </x-slot>
                     MySQL
                 </x-ui.pills.icon-pill>
 
                 <x-ui.pills.icon-pill tabindex="0"
-                    class="inline-flex items-center px-3 py-1 bg-cyan-200 text-cyan-800 rounded-full text-sm"
-                    icon='<i class="fab fa-css3-alt"></i>'>
+                    class="inline-flex items-center px-3 py-1 bg-cyan-200 text-cyan-800 rounded-full text-sm">
+                    <x-slot name="icon">
+                        {{-- Use the single blade component for the Tailwind CSS icon. Adjust size with Tailwind classes. --}}
+                        <x-si-tailwindcss class="w-3 h-3" />
+                    </x-slot>
                     Tailwind
                 </x-ui.pills.icon-pill>
 
                 <x-ui.pills.icon-pill tabindex="0"
-                    class="inline-flex items-center px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm"
-                    icon='<i class="fab fa-js"></i>'>
+                    class="inline-flex items-center px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-sm">
+                    <x-slot name="icon">
+                        <i class="fab fa-js"></i>
+                    </x-slot>
                     JavaScript
                 </x-ui.pills.icon-pill>
 
                 <x-ui.pills.icon-pill tabindex="0"
-                    class="inline-flex items-center px-3 py-1 bg-teal-200 text-teal-800 rounded-full text-sm"
-                    icon='<i class="fas fa-mobile-alt"></i>'>
+                    class="inline-flex items-center px-3 py-1 bg-teal-200 text-teal-800 rounded-full text-sm">
+                    <x-slot name="icon">
+                        <x-si-flutter class="w-3 h-3" />
+                    </x-slot>
                     Flutter / Dart
                 </x-ui.pills.icon-pill>
             </div>

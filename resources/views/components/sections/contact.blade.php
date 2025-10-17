@@ -1,4 +1,4 @@
-<!-- Contact Form -->
+{{-- <!-- Contact Form -->
 <section class="mb-16">
     <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
     <div class="bg-gray-50 p-8 rounded-lg shadow-md">
@@ -24,4 +24,4 @@
             </button>
         </form>
     </div>
-</section>
+</section> --}}

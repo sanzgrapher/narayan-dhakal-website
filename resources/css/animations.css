@@ -44,30 +44,69 @@
 
 /* Icon elements inside pills */
 .icon-pill > i,
+.icon-pill > svg,
+.icon-pill > g,
 .tech-icon .icon-pill > i,
+.tech-icon .icon-pill > svg,
 .tech-icon button.icon-pill > i,
-.animate-icon-on-hover > i {
+.animate-icon-on-hover > i,
+.animate-icon-on-hover > svg {
     display: inline-block;
     transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1);
     will-change: transform;
     transform-origin: center 60%;
 }
 
+/* Force pill icons to a consistent small size (15px) */
+.icon-pill > i,
+.icon-pill > svg,
+.icon-pill > g,
+.animate-icon-on-hover > i,
+.animate-icon-on-hover > svg {
+    width: 15px;
+    height: 15px;
+}
+
 /* Apply jump-rotate animation on hover/focus */
 .icon-pill:hover > i,
 .icon-pill:focus > i,
+.icon-pill:hover > svg,
+.icon-pill:focus > svg,
 .tech-icon:hover .icon-pill > i,
 .tech-icon:focus-within .icon-pill > i,
+.tech-icon:hover .icon-pill > svg,
+.tech-icon:focus-within .icon-pill > svg,
 .animate-icon-on-hover:hover > i,
 .animate-icon-on-hover:focus > i,
-.animate-icon-on-hover:focus-within > i {
+.animate-icon-on-hover:hover > svg,
+.animate-icon-on-hover:focus > svg,
+.animate-icon-on-hover:focus-within > i,
+.animate-icon-on-hover:focus-within > svg {
     animation: jump-rotate 420ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+/* Ensure SVG elements transform from their geometric box */
+.icon-pill svg,
+.animate-icon-on-hover svg,
+.tech-icon .icon-pill svg {
+    transform-box: fill-box;
+    transform-origin: center 60%;
 }
 
 /* ===== TECH ICON ANIMATIONS ===== */
 .tech-icon {
     transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.2, 1),
         box-shadow 0.18s ease;
+}
+/* Restrict tech icons (FA/svg components) to max 35px for consistent layout */
+.tech-icon i,
+.tech-icon svg,
+.tech-icon .icon-pill > i,
+.tech-icon .icon-pill > svg {
+    max-width: 35px;
+    max-height: 35px;
+    width: auto;
+    height: auto;
 }
 
 .tech-icon:hover,
