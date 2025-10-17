@@ -81,174 +81,101 @@
                     <div class="marquee-track" tabindex="0">
                         <!-- original track -->
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Laravel"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-laravel text-5xl text-red-500 mb-2"></i>
-                                <span class="text-sm font-medium">Laravel</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Laravel"
+                                icon='<i class="fab fa-laravel text-5xl text-red-500 mb-2"></i>' label="Laravel" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Vue.js"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-vuejs text-5xl text-green-500 mb-2"></i>
-                                <span class="text-sm font-medium">Vue.js</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Vue.js"
+                                icon='<i class="fab fa-vuejs text-5xl text-green-500 mb-2"></i>' label="Vue.js" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="PHP"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-php text-5xl text-indigo-500 mb-2"></i>
-                                <span class="text-sm font-medium">PHP</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="PHP"
+                                icon='<i class="fab fa-php text-5xl text-indigo-500 mb-2"></i>' label="PHP" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="MySQL"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fas fa-database text-5xl text-blue-500 mb-2"></i>
-                                <span class="text-sm font-medium">MySQL</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="MySQL"
+                                icon='<i class="fas fa-database text-5xl text-blue-500 mb-2"></i>' label="MySQL" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="JavaScript"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-js text-5xl text-yellow-500 mb-2"></i>
-                                <span class="text-sm font-medium">JavaScript</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="JavaScript"
+                                icon='<i class="fab fa-js text-5xl text-yellow-500 mb-2"></i>' label="JavaScript" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Git"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-git-alt text-5xl text-orange-500 mb-2"></i>
-                                <span class="text-sm font-medium">Git</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Git"
+                                icon='<i class="fab fa-git-alt text-5xl text-orange-500 mb-2"></i>' label="Git" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Docker"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-docker text-5xl text-blue-400 mb-2"></i>
-                                <span class="text-sm font-medium">Docker</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Docker"
+                                icon='<i class="fab fa-docker text-5xl text-blue-400 mb-2"></i>' label="Docker" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="AWS"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-aws text-5xl text-orange-400 mb-2"></i>
-                                <span class="text-sm font-medium">AWS</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="AWS"
+                                icon='<i class="fab fa-aws text-5xl text-orange-400 mb-2"></i>' label="AWS" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Tailwind"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fas fa-wind text-5xl text-cyan-500 mb-2"></i>
-                                <span class="text-sm font-medium">Tailwind</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Tailwind"
+                                icon='<i class="fas fa-wind text-5xl text-cyan-500 mb-2"></i>' label="Tailwind" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Bootstrap"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-bootstrap text-5xl text-purple-500 mb-2"></i>
-                                <span class="text-sm font-medium">Bootstrap</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Bootstrap"
+                                icon='<i class="fab fa-bootstrap text-5xl text-purple-500 mb-2"></i>'
+                                label="Bootstrap" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Redis"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fas fa-server text-5xl text-gray-500 mb-2"></i>
-                                <span class="text-sm font-medium">Redis</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Redis"
+                                icon='<i class="fas fa-server text-5xl text-gray-500 mb-2"></i>' label="Redis" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Node.js"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-node text-5xl text-green-600 mb-2"></i>
-                                <span class="text-sm font-medium">Node.js</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Node.js"
+                                icon='<i class="fab fa-node text-5xl text-green-600 mb-2"></i>' label="Node.js" />
                         </div>
                         <!-- duplicate track for seamless looping -->
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Laravel"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-laravel text-5xl text-red-500 mb-2"></i>
-                                <span class="text-sm font-medium">Laravel</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Laravel"
+                                icon='<i class="fab fa-laravel text-5xl text-red-500 mb-2"></i>' label="Laravel" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Vue.js"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-vuejs text-5xl text-green-500 mb-2"></i>
-                                <span class="text-sm font-medium">Vue.js</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Vue.js"
+                                icon='<i class="fab fa-vuejs text-5xl text-green-500 mb-2"></i>' label="Vue.js" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="PHP"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-php text-5xl text-indigo-500 mb-2"></i>
-                                <span class="text-sm font-medium">PHP</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="PHP"
+                                icon='<i class="fab fa-php text-5xl text-indigo-500 mb-2"></i>' label="PHP" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="MySQL"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fas fa-database text-5xl text-blue-500 mb-2"></i>
-                                <span class="text-sm font-medium">MySQL</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="MySQL"
+                                icon='<i class="fas fa-database text-5xl text-blue-500 mb-2"></i>' label="MySQL" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="JavaScript"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-js text-5xl text-yellow-500 mb-2"></i>
-                                <span class="text-sm font-medium">JavaScript</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="JavaScript"
+                                icon='<i class="fab fa-js text-5xl text-yellow-500 mb-2"></i>' label="JavaScript" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Git"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-git-alt text-5xl text-orange-500 mb-2"></i>
-                                <span class="text-sm font-medium">Git</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Git"
+                                icon='<i class="fab fa-git-alt text-5xl text-orange-500 mb-2"></i>' label="Git" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Docker"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-docker text-5xl text-blue-400 mb-2"></i>
-                                <span class="text-sm font-medium">Docker</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Docker"
+                                icon='<i class="fab fa-docker text-5xl text-blue-400 mb-2"></i>' label="Docker" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="AWS"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-aws text-5xl text-orange-400 mb-2"></i>
-                                <span class="text-sm font-medium">AWS</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="AWS"
+                                icon='<i class="fab fa-aws text-5xl text-orange-400 mb-2"></i>' label="AWS" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Tailwind"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fas fa-wind text-5xl text-cyan-500 mb-2"></i>
-                                <span class="text-sm font-medium">Tailwind</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Tailwind"
+                                icon='<i class="fas fa-wind text-5xl text-cyan-500 mb-2"></i>' label="Tailwind" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Bootstrap"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-bootstrap text-5xl text-purple-500 mb-2"></i>
-                                <span class="text-sm font-medium">Bootstrap</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Bootstrap"
+                                icon='<i class="fab fa-bootstrap text-5xl text-purple-500 mb-2"></i>'
+                                label="Bootstrap" />
                         </div>
                         <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Redis"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fas fa-server text-5xl text-gray-500 mb-2"></i>
-                                <span class="text-sm font-medium">Redis</span>
-                            </button>
+                            <x-ui.cards.labeledicon aria-label="Redis"
+                                icon='<i class="fas fa-server text-5xl text-gray-500 mb-2"></i>' label="Redis" />
                         </div>
-                        <div class="marquee-item tech-icon text-center">
-                            <button aria-label="Node.js"
-                                class="icon-pill inline-flex flex-col items-center bg-transparent p-2">
-                                <i class="fab fa-node text-5xl text-green-600 mb-2"></i>
-                                <span class="text-sm font-medium">Node.js</span>
-                            </button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
