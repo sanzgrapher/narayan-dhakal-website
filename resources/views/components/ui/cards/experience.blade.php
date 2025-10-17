@@ -25,13 +25,54 @@ Usage:
     'description' => '',
     'skills' => [],
     'borderColor' => 'border-red-500',
+    // optional: explicit company link and icon
+    'companyLink' => null,
+    'companyIcon' => null,
 ])
 
 <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 {{ $borderColor }}">
     <div class="flex justify-between items-start mb-2">
         <div>
             <h3 class="text-xl font-bold">{{ $title }}</h3>
-            <p class="{{ str_replace('border-', 'text-', $borderColor) }} font-medium">{!! $company !!}</p>
+            @php
+                use Illuminate\Support\Str;
+            @endphp
+
+            <p class="{{ str_replace('border-', 'text-', $borderColor) }} font-medium">
+                @if ($companyIcon)
+                    {{-- Explicit icon provided: render icon (link to companyLink or '#' if missing) --}}
+                    <span class="flex items-center">
+                        <a href="{{ $companyLink ?? '#' }}"
+                            @if ($companyLink) target="_blank" rel="noopener noreferrer" @endif
+                            class="ml-2 text-gray-600 hover:text-red-600" aria-label="Company website">
+                            {!! $companyIcon !!}
+                        </a>
+                        <span class="ml-2">{{ $company }}</span>
+                    </span>
+                @elseif ($companyLink)
+                    {{-- Only link provided: derive a sensible default icon based on URL --}}
+                    @php
+                        $icon = 'fas fa-globe';
+                        if (Str::contains($companyLink, 'github')) {
+                            $icon = 'fab fa-github';
+                        } elseif (Str::contains($companyLink, 'play.google') || Str::contains($companyLink, 'google')) {
+                            $icon = 'fab fa-google-play';
+                        } elseif (Str::contains($companyLink, 'linkedin')) {
+                            $icon = 'fab fa-linkedin';
+                        }
+                    @endphp
+                    <span class="flex items-center">
+                        <a href="{{ $companyLink }}" target="_blank" rel="noopener noreferrer"
+                            class="ml-2 text-gray-600 hover:text-red-600" aria-label="Company website">
+                            <i class="{{ $icon }}"></i>
+                        </a>
+                        <span class="ml-2">{{ $company }}</span>
+                    </span>
+                @else
+                    {{-- No icon or link: render plain company text --}}
+                    {{ $company }}
+                @endif
+            </p>
         </div>
         <span class="text-sm text-gray-600">{{ $duration }}</span>
     </div>
