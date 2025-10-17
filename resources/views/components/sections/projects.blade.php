@@ -2,6 +2,10 @@
 <section class="mb-16">
     <h2 class="text-3xl font-bold mb-6">Featured Projects</h2>
     <div class="grid md:grid-cols-2 gap-6">
+        <x-ui.cards.project title="Personal Portfolio — Narayan Dhakal"
+            description="Open-source personal website and portfolio built with Laravel, featuring projects, resume, and blog."
+            :technologies="['Open-source', 'Laravel', 'Blade', 'Vite']" link="https://github.com/sanzgrapher/narayan-dhakal-website" />
+
         <x-ui.cards.project title="Multivendor eCommerce — Electrox"
             description="Efficient stock handling, role-based authentication, and eSewa payment integration for end-to-end e-commerce management."
             :technologies="['Laravel', 'MySQL', 'AdminLTE', 'eSewa']" link="https://github.com/sanzgrapher/Multi-Vendor-Ecommerce-Gces-Minor-ii" />
