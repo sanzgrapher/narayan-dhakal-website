@@ -1,0 +1,186 @@
+/* ===== REUSABLE ANIMATION STYLES ===== */
+/* Use these classes across any page for consistent animations */
+
+/* ===== ICON ANIMATIONS ===== */
+/* Combined jump + rotate animation for icons */
+@keyframes jump-rotate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    30% {
+        transform: translateY(-8px) rotate(-6deg);
+    }
+    60% {
+        transform: translateY(-4px) rotate(6deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Icon pill base styles and animations */
+.icon-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    transition: transform 0.18s cubic-bezier(0.2, 0.9, 0.2, 1),
+        background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.icon-pill:hover,
+.icon-pill:focus {
+    transform: translateY(-3px);
+}
+
+.icon-pill:active {
+    transform: translateY(-1px) scale(0.995);
+}
+
+.icon-pill:focus {
+    outline: 2px solid transparent;
+}
+
+/* Icon elements inside pills */
+.icon-pill > i,
+.tech-icon .icon-pill > i,
+.tech-icon button.icon-pill > i,
+.animate-icon-on-hover > i {
+    display: inline-block;
+    transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1);
+    will-change: transform;
+    transform-origin: center 60%;
+}
+
+/* Apply jump-rotate animation on hover/focus */
+.icon-pill:hover > i,
+.icon-pill:focus > i,
+.tech-icon:hover .icon-pill > i,
+.tech-icon:focus-within .icon-pill > i,
+.animate-icon-on-hover:hover > i,
+.animate-icon-on-hover:focus > i,
+.animate-icon-on-hover:focus-within > i {
+    animation: jump-rotate 420ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+/* ===== TECH ICON ANIMATIONS ===== */
+.tech-icon {
+    transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.2, 1),
+        box-shadow 0.18s ease;
+}
+
+.tech-icon:hover,
+.tech-icon:focus-within {
+    transform: translateY(-2px) scale(1.01);
+}
+
+.tech-icon:active {
+    transform: translateY(-2px) scale(0.995);
+}
+
+/* ===== MARQUEE ANIMATIONS ===== */
+.marquee-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+/* Fade overlays for smooth marquee edges */
+.marquee-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6rem;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.marquee-fade.left {
+    left: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(243, 244, 246, 1),
+        rgba(243, 244, 246, 0)
+    );
+}
+
+.marquee-fade.right {
+    right: 0;
+    background: linear-gradient(
+        270deg,
+        rgba(243, 244, 246, 1),
+        rgba(243, 244, 246, 0)
+    );
+}
+
+.marquee-track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    white-space: nowrap;
+    will-change: transform;
+    --marquee-duration: 22s;
+    animation: marquee-lr var(--marquee-duration, 22s) linear infinite;
+}
+
+.marquee-item {
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: max-content;
+}
+
+/* Marquee keyframes */
+@keyframes marquee-lr {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-rl {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* ===== CARD ANIMATIONS ===== */
+.project-card,
+.article-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.article-card:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== UTILITY ANIMATIONS ===== */
+/* Global transition base */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typewriter subtitle space reservation */
+#subtitle-typer {
+    display: inline-block;
+    min-width: 10ch;
+    min-height: 1.2em;
+}
+
+/* Generic hover animation class for any element */
+.animate-icon-on-hover:hover > i,
+.animate-icon-on-hover:focus > i,
+.animate-icon-on-hover:focus-within > i {
+    animation: jump-rotate 420ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
