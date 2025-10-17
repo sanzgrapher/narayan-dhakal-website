@@ -2,46 +2,20 @@
 <section class="mb-16">
     <h2 class="text-3xl font-bold mb-6">Articles & Guides</h2>
     <div class="space-y-4">
-        <div class="article-card bg-gray-50 p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-bold mb-2">
-                Building Scalable Laravel Applications
-            </h3>
-            <p class="text-gray-700 mb-3">
-                Best practices for structuring large-scale Laravel projects with
-                clean architecture patterns
-            </p>
-            <a href="#" class="text-red-600 hover:text-red-700 text-sm font-medium">Read More →</a>
-        </div>
+        <x-ui.cards.article title="Building Scalable Laravel Applications"
+            description="Best practices for structuring large-scale Laravel projects with clean architecture patterns"
+            link="#" />
 
-        <div class="article-card bg-gray-50 p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-bold mb-2">
-                Laravel Queue Optimization Techniques
-            </h3>
-            <p class="text-gray-700 mb-3">
-                Deep dive into optimizing queue workers and handling background
-                jobs efficiently
-            </p>
-            <a href="#" class="text-red-600 hover:text-red-700 text-sm font-medium">Read More →</a>
-        </div>
+        <x-ui.cards.article title="Laravel Queue Optimization Techniques"
+            description="Deep dive into optimizing queue workers and handling background jobs efficiently"
+            link="#" />
 
-        <div class="article-card bg-gray-50 p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-bold mb-2">
-                JWT Authentication in Laravel APIs
-            </h3>
-            <p class="text-gray-700 mb-3">
-                Complete guide to implementing secure token-based authentication
-                in your Laravel applications
-            </p>
-            <a href="#" class="text-red-600 hover:text-red-700 text-sm font-medium">Read More →</a>
-        </div>
+        <x-ui.cards.article title="JWT Authentication in Laravel APIs"
+            description="Complete guide to implementing secure token-based authentication in your Laravel applications"
+            link="#" />
 
-        <div class="article-card bg-gray-50 p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-bold mb-2">Database Performance Tuning</h3>
-            <p class="text-gray-700 mb-3">
-                Strategies for optimizing database queries and improving
-                application performance
-            </p>
-            <a href="#" class="text-red-600 hover:text-red-700 text-sm font-medium">Read More →</a>
-        </div>
+        <x-ui.cards.article title="Database Performance Tuning"
+            description="Strategies for optimizing database queries and improving application performance"
+            link="#" />
     </div>
 </section>

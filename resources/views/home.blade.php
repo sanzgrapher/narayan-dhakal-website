@@ -47,7 +47,6 @@
         <x-sections.footer />
     </div>
 
-    <!-- home page JS moved to resources/js/app.js -->
-</body>
+ </body>
 
 </html>
