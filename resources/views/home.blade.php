@@ -24,8 +24,9 @@
 </head>
 
 <body class="bg-gray-100 text-gray-800">
-    <div class="max-w-4xl mx-auto px-6 py-12">
+    <div class="max-w-4xl mx-auto px-6 py-12 relative">
         <!-- Profile Section -->
+        <x-ui.share.vertical side="right" />
         <x-sections.hero.profile />
 
         <!-- Tools & Technologies -->
@@ -47,6 +48,6 @@
         <x-sections.footer />
     </div>
 
- </body>
+</body>
 
 </html>
